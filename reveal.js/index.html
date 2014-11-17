@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>C# v6 demo</title>
+
+		<meta name="description" content="C# v6 ...the love, the horror">
+		<meta name="author" content="Stefan Daugaard Poulsen">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section data-markdown>
+					<script type="text/template">
+						#C# 6
+						##...the love, the horror
+					</script>
+				</section>
+				
+				<section data-markdown>
+					<script type="text/template">
+						#Agenda
+						
+						##What's in CTP3 <!-- .element: class="fragment roll-in" data-fragment-index="1" -->
+						##Grumpy old man section <!-- .element: class="fragment roll-in" data-fragment-index="2" -->
+						
+						![Grumpy old men](images/grumpy.gif) <!-- .element: class="fragment roll-in" data-fragment-index="2" -->
+					</script>
+				</section>
+
+				<section>
+					<section data-markdown>
+						<script type="text/template">
+						#How-to
+										
+						```
+							<LangVersion>experimental</LangVersion>
+						```
+						</script>
+					</section>				
+				
+					<section data-markdown>
+						<script type="text/template">
+						#Auto-property
+						
+						* Initializers <!-- .element: class="fragment roll-in" -->
+						* Get-only <!-- .element: class="fragment roll-in" -->
+						</script>
+					</section>
+					
+					<section data-markdown>
+						<script type="text/template">
+						#Primary ctors
+						
+						* Constructur bodies <!-- .element: class="fragment roll-in" -->
+						* ctor overload <!-- .element: class="fragment roll-in" -->
+						* base initializers <!-- .element: class="fragment roll-in" -->
+						* initializer scope <!-- .element: class="fragment roll-in" -->
+						* partials <!-- .element: class="fragment roll-in" -->
+						</script>
+					</section>
+					
+					<section data-markdown>
+						<script type="text/template">
+							#Expression bodies
+							##Ex-what? <!-- .element: class="fragment roll-in" -->
+							
+							* Methods  <!-- .element: class="fragment roll-in" -->
+							* Property-link <!-- .element: class="fragment roll-in" -->
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							#Structs
+
+							* Initializers
+						</script>
+					</section>
+					
+					<section data-markdown>
+						<script type="text/template">
+							#Static
+														
+							* No prefix <!-- .element: class="fragment roll-in"  -->
+							* Extension-methods <!-- .element: class="fragment roll-in"  -->
+						</script>
+					</section>
+					
+					<section data-markdown>
+						<script type="text/template">
+							#Exception filters
+							
+							* Everyone else has it <!-- .element: class="fragment roll-in"  -->
+							* Log some exceptions <!-- .element: class="fragment roll-in"  -->
+						</script>
+					</section>
+					
+					<section data-markdown>
+						<script type="text/template">
+							##Declaration expressions
+							
+							* A what? <!-- .element: class="fragment roll-in" -->
+						</script>
+					</section>
+					
+					<section data-markdown>
+						<script type="text/template">
+							#nameof expression
+							
+							* Why did we have to wait? <!-- .element: class="fragment roll-in" -->
+						</script>
+					</section>
+					
+					<section data-markdown>
+						<script type="text/template">
+							#Null-conditionals
+
+							* No more null checks
+						</script>
+					</section>
+					
+					<section data-markdown>
+						<script type="text/template">
+							#Index initializers
+							
+							```
+								var numbers = new Dictionary<int, string> {
+									[7] = "seven",
+									[9] = "nine",
+									[13] = "thirteen"
+								};
+							```
+							
+							* Not really there yet <!-- .element: class="fragment roll-in" -->
+						</script>
+					</section>
+					
+					<section data-markdown>
+						<script type="text/template">
+						#try/catch await
+						
+						* wait while you try? <!-- .element: class="fragment roll-in" -->
+						* try while you wait? <!-- .element: class="fragment roll-in" -->
+						</script>
+					</section>
+					
+					
+					<section data-markdown>
+						<script type="text/template">
+							##Binary literals and digit separators
+							
+							* AMAZING FEATURE!!! <!-- .element: class="fragment roll-in" -->
+								* ...for some <!-- .element: class="fragment roll-in" -->
+						</script>
+					</section>
+				</section>
+				
+				<section>
+					<section data-markdown>
+						<script type="text/template">
+							#Auto-property
+							
+							* easier making immutual <!-- .element: class="fragment roll-in" -->
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							#Primary ctors
+
+							* Hard as hell to read <!-- .element: class="fragment roll-in" data-fragment-index="1" -->
+								* ...for a while <!-- .element: class="fragment roll-in" data-fragment-index="2" -->
+								* well primary ctor logic is a horrible abomination <!-- .element: class="fragment roll-in" data-fragment-index="3" -->
+							* Less plumbing <!-- .element: class="fragment roll-in" data-fragment-index="4" -->
+							
+							![Frankenstein](images/frankenstein.gif) <!-- .element: class="fragment roll-in" data-fragment-index="3" -->
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+						#Expression bodies
+						
+						* Clever trick for short functionality <!-- .element: class="fragment roll-in" -->
+						* Can be made really horrible as hell <!-- .element: class="fragment roll-in" -->
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							#Static
+							
+							*  Just like VB <!-- .element: class="fragment roll-in" data-fragment-index="1" -->
+							* Horrible to read  <!-- .element: class="fragment roll-in" data-fragment-index="2" -->
+								* ...why do MSFT hate us? <!-- .element: class="fragment roll-in" data-fragment-index="3" -->
+							
+							![AAAAARGH](images/argh.gif) <!-- .element: class="fragment roll-in" data-fragment-index="1" -->
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							##Declaration expressions
+							
+							* out was never a good language feature! <!-- .element: class="fragment roll-in" -->
+							* it's not object oriented programming <!-- .element: class="fragment roll-in" -->
+							* it's not function programming <!-- .element: class="fragment roll-in" -->
+							* stop fearing small input/output object/messages <!-- .element: class="fragment roll-in" -->
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							#Null-conditionals
+
+							* lazy? <!-- .element: class="fragment roll-in" -->
+							* convinient? <!-- .element: class="fragment roll-in" -->
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							#Null-conditionals
+
+							* lazy?
+							* convinient?
+							
+							```
+								var lazy = context?.Customers?.Order?.Lines?.Address?.Customer
+							```
+							
+							* wait WAT! <!-- .element: class="fragment roll-in" -->
+						</script>
+					</section>
+				</section>
+
+				<section>
+					<section data-markdown>
+						<script type="text/template">
+							#Remember kids!
+							
+							![spiderman](images/spiderman.gif) <!-- .element: class="fragment roll-in" -->
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							![THE END](images/theend.gif)
+							
+							###BY CYBERZED
+						</script>
+					</section>
+				</section>
+			</div>
+			
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
