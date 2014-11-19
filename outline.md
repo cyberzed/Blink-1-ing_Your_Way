@@ -28,6 +28,7 @@
 		* HIDLibrary
 			* Will cost you ~35kB
 		* MightyHID
+			* Half way there
 		* HIDSharp
 		* Etc.
 	* Native
